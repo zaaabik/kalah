@@ -1,0 +1,16 @@
+#include"game.h"
+#define START_VALUE 4
+#define COUNT_OF_HOLES 14
+Game::Game(char mode)
+{
+    game_mode = mode; //1 == player vs ii, 2 == ii vs ii
+    mas_of_holes = new int[COUNT_OF_HOLES];
+    for(int i = 0; i < 8;++i)
+    {
+        mas_of_holes[i] = START_VALUE; // every hole has same value of stones inside
+    }
+}
+Game::~Game()
+{
+    delete mas_of_holes;
+}

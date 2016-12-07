@@ -1,0 +1,16 @@
+#ifndef GAME_H
+#define GAME_H
+class Game
+{
+private:
+    int* mas_of_holes = nullptr;
+    char game_mode = 0;
+
+public:
+    Game(char game_mode_1);
+    ~Game();
+
+
+};
+
+#endif // GAME_H

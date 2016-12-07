@@ -1,0 +1,4 @@
+c++ - oбщее sfml/include
+c++ - препроцессор  определение препроцессора SFML_DYNAMIC;
+компановщик доп каталоги библ sfml/lib
+компановщик ввод sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;

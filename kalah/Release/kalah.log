@@ -1,0 +1,8 @@
+﻿  Board.cpp
+d:\projects\kalah\kalah\View.h(3): fatal error C1083: Не удается открыть файл включение: SFML\Graphics.hpp: No such file or directory
+  View.cpp
+d:\projects\kalah\kalah\View.h(3): fatal error C1083: Не удается открыть файл включение: SFML\Graphics.hpp: No such file or directory
+  game.cpp
+d:\projects\kalah\kalah\View.h(3): fatal error C1083: Не удается открыть файл включение: SFML\Graphics.hpp: No such file or directory
+  main.cpp
+d:\projects\kalah\kalah\View.h(3): fatal error C1083: Не удается открыть файл включение: SFML\Graphics.hpp: No such file or directory
