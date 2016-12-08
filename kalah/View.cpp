@@ -9,11 +9,26 @@
 #define PADDING_LEFT_4_CELLS 95
 #define FIRST_PLAYER 200
 #define SECOND_PLAYER 50
+
 typedef struct cellIsClicked
 {
 	int cell;
 	bool isClicked;
 }cellIsClicked;
+
+/**
+ @fn	void chooseDificultWindow(sf::RenderWindow& window, Board& gameBoard, int PlayerNumber)
+
+ @brief	Choose dificult window.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window			current window.
+ @param [in,out]	gameBoard   	The game board.
+ @param 			PlayerNumber	Number of players.
+ */
+
 void chooseDificultWindow(sf::RenderWindow& window, Board& gameBoard, int PlayerNumber)
 {
 	Button easy("Easy", window.getSize().x / 2, window.getSize().y / 2 - 100);
@@ -63,6 +78,22 @@ void chooseDificultWindow(sf::RenderWindow& window, Board& gameBoard, int Player
 		
 	}
 }
+
+/**
+ @fn	void View::showText(sf::RenderWindow& window, sf::String text_, int x, int y, int type)
+
+ @brief	Shows the text.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window	the window in which text will be displayed.
+ @param 			text_ 	The text.
+ @param 			x	  	The x coordinate.
+ @param 			y	  	The y coordinate.
+ @param 			type  	if type = 1 function will use main menu fonts, if type = 2 fonts for game will be used.
+ */
+
 void View::showText(sf::RenderWindow& window, sf::String text_, int x, int y, int type)
 {
 	if(type == 1) //mainMenu
@@ -85,7 +116,21 @@ void View::showText(sf::RenderWindow& window, sf::String text_, int x, int y, in
 		window.draw(text);
 	}
 }
-cellIsClicked choosCell(sf::RenderWindow& window, sf::Event event1) {
+
+/**
+ @fn	cellIsClicked choosCell(sf::RenderWindow& window)
+
+ @brief	Choos cell.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window	current window.
+
+ @return	number of chosen cell and is the cell clicked.
+ */
+
+cellIsClicked choosCell(sf::RenderWindow& window) {
 	sf::Time a;
 	sf::Mouse mouse;
 	cellIsClicked res;
@@ -114,6 +159,17 @@ cellIsClicked choosCell(sf::RenderWindow& window, sf::Event event1) {
 	}
 }
 
+/**
+ @fn	void View::showALlCells(sf::RenderWindow& window)
+
+ @brief	Shows a ll cells.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window	the window in which cells will be displayed..
+ */
+
 void View::showALlCells(sf::RenderWindow& window) {
 	sf::Text textFont("hello", font, 50);
 	textFont.setColor(sf::Color(188, 185, 104));
@@ -136,6 +192,17 @@ void View::showALlCells(sf::RenderWindow& window) {
 	}
 }
 
+/**
+ @fn	void View::showKalahs(sf::RenderWindow& window)
+
+ @brief	Shows the kalahs.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window	the window in which kalahs will be displayed.
+ */
+
 void View::showKalahs(sf::RenderWindow& window) {
 	sf::Text textFont("hello", font, 80);
 	textFont.setColor(sf::Color(188, 185, 104));
@@ -152,6 +219,17 @@ void View::showKalahs(sf::RenderWindow& window) {
 	textFont.setPosition(20, 90);
 	window.draw(textFont);
 }
+
+/**
+ @fn	void View::mainMenu(sf::RenderWindow& window)
+
+ @brief	Main menu.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window	the window in which main menu will be displayed.
+ */
 
 void View::mainMenu(sf::RenderWindow& window) {
 	
@@ -197,13 +275,25 @@ void View::mainMenu(sf::RenderWindow& window) {
 	std::cout << "exit" << std::endl;
 }
 
+/**
+ @fn	int View::chooseMove(sf::RenderWindow& window,sf::Event& ev)
 
+ @brief	Choose move.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window	current window.
+ @param [in,out]	ev	  	current window`s event.
+
+ @return	cell choosing by player or -1 if player dont choose his cell.
+ */
 
 int View::chooseMove(sf::RenderWindow& window,sf::Event& ev) {
 	cellIsClicked res;
 	res.isClicked = false;
 	res.cell = -1;
-	res = choosCell(window, ev);
+	res = choosCell(window);
 	
 	
 	if ((res.cell >= 0 && res.cell <= 5) && board->canMove(res.cell) && res.isClicked)
@@ -213,6 +303,18 @@ int View::chooseMove(sf::RenderWindow& window,sf::Event& ev) {
 	return -1;
 
 }
+
+/**
+ @fn	View::View(Board* board_)
+
+ @brief	Constructor.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	board_	game board.
+ */
+
 View::View(Board* board_) {
 	board = board_;
 	std::ofstream log("log.txt", std::ios::out);
@@ -236,8 +338,30 @@ View::View(Board* board_) {
 		log << "font doesnt exist!";
 	}
 }
+
+/**
+ @fn	View::~View()
+
+ @brief	Destructor.
+
+ @author	Root
+ @date	08.12.2016
+ */
+
 View::~View() {
 }
+
+/**
+ @fn	void View::showBoard(sf::RenderWindow& window)
+
+ @brief	Shows the board in graphic mode.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window	the window in which the board will be displayer.
+ */
+
 void View::showBoard(sf::RenderWindow& window) {
 	window.clear(sf::Color(80,85,63));
 	kalah.setPosition(0, 90);        // show kalah
@@ -285,6 +409,16 @@ void View::showBoard(sf::RenderWindow& window) {
 	window.clear(sf::Color(80,85,63));
 
 }
+
+/**
+ @fn	void View::showBoard()
+
+ @brief	Shows the board in a console.
+
+ @author	Root
+ @date	08.12.2016
+ */
+
 void View::showBoard() {
 	for (int i = NUMBER_OF_CELLS - 2; i >= NUMBER_OF_CELLS / 2; --i) {
 		printf(" %d ", board->getCell(i));
@@ -301,13 +435,24 @@ void View::showBoard() {
 	}
 	printf("\n\n");
 }
+
+/**
+ @fn	void View::gameCycle()
+
+ @brief	Start game cycle.
+
+ @author	Root
+ @date	08.12.2016
+ */
+
 void View::gameCycle() {
 	//  1 - game mode player vs ii
 	//  2 - game mode ii vs ii
 	sf::RenderWindow window(sf::VideoMode(700, 393), "Kalah game");
 	mainMenu(window);
 	chooseDificultWindow(window, *board,1);
-	chooseDificultWindow(window, *board,2);
+	if(board->getGameMode() == 2)
+		chooseDificultWindow(window, *board,2);
 	if (board->getGameMode() == 1) {
 		while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) && window.isOpen()) {
 				sf::Event event;

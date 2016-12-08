@@ -1,5 +1,19 @@
 #include "button.h"
 #include<iostream>
+
+/**
+ @fn	Button::Button(sf::String buttonName, int x_, int y_)
+
+ @brief	Constructor.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param	buttonName	Name of the button.
+ @param	x_		  	The x coordinate.
+ @param	y_		  	The y coordinate.
+ */
+
 Button::Button(sf::String buttonName, int x_, int y_) {
 	if(buttonFont.loadFromFile("Media\\mainMenuFont.otf"))
 	{
@@ -14,8 +28,18 @@ Button::Button(sf::String buttonName, int x_, int y_) {
 	buttonText.setPosition(x,y);
 }
 
+/**
+ @fn	Button::~Button()
+
+ @brief	Destructor.
+
+ @author	Root
+ @date	08.12.2016
+ */
+
 Button::~Button() {
 }
+
 bool isInInterval(int x, int y, int point) {
 	if(x <= point && y >= point)
 	{
@@ -25,9 +49,34 @@ bool isInInterval(int x, int y, int point) {
 	
 }
 
+/**
+ @fn	void Button::showButton(sf::RenderWindow& window)
+
+ @brief	Shows the button.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window	the window in which button will be displayed.
+ */
+
 void Button::showButton(sf::RenderWindow& window) {
 	window.draw(buttonText);
 }
+
+/**
+ @fn	bool Button::isPressed(sf::RenderWindow& window, sf::Event& event)
+
+ @brief	Query if 'window' is pressed.
+
+ @author	Root
+ @date	08.12.2016
+
+ @param [in,out]	window	current window.
+ @param [in,out]	event 	current window`s event.
+
+ @return	True if pressed, false if not.
+ */
 
 bool Button::isPressed(sf::RenderWindow& window, sf::Event& event) {
 	if (isInInterval(y, y + buttonText.getCharacterSize(), sf::Mouse::getPosition(window).y)

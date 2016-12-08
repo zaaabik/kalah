@@ -1,10 +1,17 @@
 #pragma once
 #define NUMBER_OF_CELLS 14
+#define CELLS 6
 #include<vector>
+
+typedef struct result
+{
+	int value = 0;
+	int move_number = 0;
+}result;
+
 class Board
 {
 private:
-
 	bool isFirst;
 	int endGame;						  // 0 = game isnt finished  1 = first win 2 = second win
 	std::vector<int> arrayOfCells;        //cells
@@ -15,19 +22,22 @@ private:
 	int diffucult_;
 	int difficlultSecond;
 	int whoStartMinMax;
+	int kalahsDiffirent();
+	
+
 public:
-	Board(int start_value, int gameMode_,int difficult);
+	Board(int start_value, int gameMode_);
 	Board(Board& obj);
 	~Board();
-	bool haveMove();
 	bool canMove(int cell_number);
 	void move(int cell_number);
+	bool haveMove();
 	int isWin();
 	int getCell(int cell_number);
 	bool isFirstMove();
 	void iiMove();						//start dfs and choose the best var of move
 	void undoMove(int cell);			//undo prev move
-	int kalahsDiffirent();
+	result abMiniMax(int deep, Board board, int alpha, int beta);
 	void changeMove();
 	int getDifficult();
 	void noMove();

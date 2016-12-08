@@ -1,6 +1,7 @@
 #pragma once
 #include"Board.h"
 #include<SFML\Graphics.hpp>
+
 class View
 {
 private:

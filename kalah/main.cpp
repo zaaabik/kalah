@@ -2,8 +2,7 @@
 #include<stdio.h>
 #include"game.h"
 #include<Windows.h>
-void hideConsole()
-{
+void hideConsole(){
 	HWND Stealth;
 	AllocConsole();
 	Stealth = FindWindowA("ConsoleWindowClass", NULL);
@@ -11,6 +10,7 @@ void hideConsole()
 }
 int main(int argc, char *argv[]) {
 	system("chcp 866");
+	//hideConsole();
 	Game(4);
 	return 0;
 }
