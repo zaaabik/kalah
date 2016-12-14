@@ -1,0 +1,475 @@
+\hypertarget{class_board}{}\section{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int start\+\_\+value, int game\+Mode\+\_\+)\hypertarget{class_board_a7af281298a739de852e78d0f576743ab}{}\label{class_board_a7af281298a739de852e78d0f576743ab}
+
+\item 
+\hyperlink{class_board_a186bacc10feaee390bcc7950371e1cc1}{Board} (\hyperlink{class_board}{Board} \&obj)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_board_af73f45730119a1fd8f6670f53f959e68}{$\sim$\+Board} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_a86a64ec0fe585404e298fab4502a48ef}{can\+Move} (int cell\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Determine if we can move of cell\+\_\+number. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a21ecc642f1351257c69f2d5c8e640deb}{move} (int cell\+\_\+number)
+\begin{DoxyCompactList}\small\item\em make a move from cell. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_a5096df29ad75d9e6be2373e69412d38d}{have\+Move} ()
+\begin{DoxyCompactList}\small\item\em Determines if we can have move. \end{DoxyCompactList}\item 
+int \hyperlink{class_board_a3ff621f3410f5d8011af0c68303f0841}{is\+Win} ()
+\begin{DoxyCompactList}\small\item\em return not zero value if game is finished. \end{DoxyCompactList}\item 
+int \hyperlink{class_board_a840e84e79ea9fd92820a0f71e7f2d444}{get\+Cell} (int cell\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Gets a stones from cell. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_ad23ca69956781b6dcf632b15fea5b677}{is\+First\+Move} ()
+\begin{DoxyCompactList}\small\item\em Return which move now. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a9942340f81a2f60ac357a5fc9dad8313}{ii\+Move} ()
+\begin{DoxyCompactList}\small\item\em Make ii move. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_ace9e1e576c696b98a959f16f9caf643e}{undo\+Move} (int cell)
+\begin{DoxyCompactList}\small\item\em Undo move from cell. \end{DoxyCompactList}\item 
+\hyperlink{structresult}{result} {\bfseries ab\+Mini\+Max} (int deep, \hyperlink{class_board}{Board} board, int alpha, int beta)\hypertarget{class_board_a126675d885b74d12c17a22f943476a68}{}\label{class_board_a126675d885b74d12c17a22f943476a68}
+
+\item 
+void \hyperlink{class_board_aad1d55272d0731a5ba89186d27bb233f}{change\+Move} ()
+\begin{DoxyCompactList}\small\item\em Change player making a move. \end{DoxyCompactList}\item 
+int \hyperlink{class_board_aef4768d46dfd2340ed85443943afb570}{get\+Difficult} ()
+\begin{DoxyCompactList}\small\item\em Gets the difficult. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a79d94f9cb1cb6ee0fc559a1f4bb64cee}{no\+Move} ()
+\begin{DoxyCompactList}\small\item\em if one of the player dont have move, other put all stones from is cell into kalah. \end{DoxyCompactList}\item 
+int \hyperlink{class_board_aa6ced20ecfbcd416e380f8b996e63377}{get\+Game\+Mode} ()
+\begin{DoxyCompactList}\small\item\em Gets game mode. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_ae3e41080eb6992a95c5bc17ac3b39fdb}{set\+Game\+Mode} (int mode)
+\begin{DoxyCompactList}\small\item\em Sets game mode. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a1dce08c626976cf45b62042edd6feaed}{set\+Difficutlt} (int difficult)
+\begin{DoxyCompactList}\small\item\em Sets a difficutlt. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a4581c7df6b7571c3bdc1c3d8a4a717ee}{set\+Difficult\+Second} (int diff)
+\begin{DoxyCompactList}\small\item\em Sets difficult second. \end{DoxyCompactList}\item 
+int \hyperlink{class_board_a645b8a2c3952ee50daa94685014882f6}{get\+Difficlut\+Second} ()
+\begin{DoxyCompactList}\small\item\em Gets difficlut second. \end{DoxyCompactList}\item 
+int \hyperlink{class_board_a799bc1de403b8c9d9425bf2d8fc9de8b}{get\+Who\+Start\+Min\+Max} ()
+\begin{DoxyCompactList}\small\item\em Gets who start min\+Max algorithm. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a326db41c1abc831e83b19adeb008a206}{set\+Who\+Start\+Min\+Max} (int number\+Of\+Player)
+\begin{DoxyCompactList}\small\item\em Sets number of player whick started minimum maximum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\subsubsection[{\texorpdfstring{Board(\+Board \&obj)}{Board(Board &obj)}}]{\setlength{\rightskip}{0pt plus 5cm}Board\+::\+Board (
+\begin{DoxyParamCaption}
+\item[{{\bf Board} \&}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a186bacc10feaee390bcc7950371e1cc1}{}\label{class_board_a186bacc10feaee390bcc7950371e1cc1}
+
+
+Copy constructor. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em obj} & The object. \\
+\hline
+\end{DoxyParams}
+\index{Board@{Board}!````~Board@{$\sim$\+Board}}
+\index{````~Board@{$\sim$\+Board}!Board@{Board}}
+\subsubsection[{\texorpdfstring{$\sim$\+Board()}{~Board()}}]{\setlength{\rightskip}{0pt plus 5cm}Board\+::$\sim$\+Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_af73f45730119a1fd8f6670f53f959e68}{}\label{class_board_af73f45730119a1fd8f6670f53f959e68}
+
+
+Destructor. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\index{Board@{Board}!can\+Move@{can\+Move}}
+\index{can\+Move@{can\+Move}!Board@{Board}}
+\subsubsection[{\texorpdfstring{can\+Move(int cell\+\_\+number)}{canMove(int cell_number)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Board\+::can\+Move (
+\begin{DoxyParamCaption}
+\item[{int}]{cell\+\_\+number}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a86a64ec0fe585404e298fab4502a48ef}{}\label{class_board_a86a64ec0fe585404e298fab4502a48ef}
+
+
+Determine if we can move of cell\+\_\+number. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+\_\+number} & The cell number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if we can move, false if not. 
+\end{DoxyReturn}
+\index{Board@{Board}!change\+Move@{change\+Move}}
+\index{change\+Move@{change\+Move}!Board@{Board}}
+\subsubsection[{\texorpdfstring{change\+Move()}{changeMove()}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::change\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_aad1d55272d0731a5ba89186d27bb233f}{}\label{class_board_aad1d55272d0731a5ba89186d27bb233f}
+
+
+Change player making a move. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016 
+\end{DoxyDate}
+\index{Board@{Board}!get\+Cell@{get\+Cell}}
+\index{get\+Cell@{get\+Cell}!Board@{Board}}
+\subsubsection[{\texorpdfstring{get\+Cell(int cell\+\_\+number)}{getCell(int cell_number)}}]{\setlength{\rightskip}{0pt plus 5cm}int Board\+::get\+Cell (
+\begin{DoxyParamCaption}
+\item[{int}]{cell\+\_\+number}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a840e84e79ea9fd92820a0f71e7f2d444}{}\label{class_board_a840e84e79ea9fd92820a0f71e7f2d444}
+
+
+Gets a stones from cell. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+\_\+number} & The cell number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Count of stones in the cell. 
+\end{DoxyReturn}
+\index{Board@{Board}!get\+Difficlut\+Second@{get\+Difficlut\+Second}}
+\index{get\+Difficlut\+Second@{get\+Difficlut\+Second}!Board@{Board}}
+\subsubsection[{\texorpdfstring{get\+Difficlut\+Second()}{getDifficlutSecond()}}]{\setlength{\rightskip}{0pt plus 5cm}int Board\+::get\+Difficlut\+Second (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a645b8a2c3952ee50daa94685014882f6}{}\label{class_board_a645b8a2c3952ee50daa94685014882f6}
+
+
+Gets difficlut second. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The difficlut second. 
+\end{DoxyReturn}
+\index{Board@{Board}!get\+Difficult@{get\+Difficult}}
+\index{get\+Difficult@{get\+Difficult}!Board@{Board}}
+\subsubsection[{\texorpdfstring{get\+Difficult()}{getDifficult()}}]{\setlength{\rightskip}{0pt plus 5cm}int Board\+::get\+Difficult (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_aef4768d46dfd2340ed85443943afb570}{}\label{class_board_aef4768d46dfd2340ed85443943afb570}
+
+
+Gets the difficult. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The difficult. 
+\end{DoxyReturn}
+\index{Board@{Board}!get\+Game\+Mode@{get\+Game\+Mode}}
+\index{get\+Game\+Mode@{get\+Game\+Mode}!Board@{Board}}
+\subsubsection[{\texorpdfstring{get\+Game\+Mode()}{getGameMode()}}]{\setlength{\rightskip}{0pt plus 5cm}int Board\+::get\+Game\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_aa6ced20ecfbcd416e380f8b996e63377}{}\label{class_board_aa6ced20ecfbcd416e380f8b996e63377}
+
+
+Gets game mode. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The game mode. 
+\end{DoxyReturn}
+\index{Board@{Board}!get\+Who\+Start\+Min\+Max@{get\+Who\+Start\+Min\+Max}}
+\index{get\+Who\+Start\+Min\+Max@{get\+Who\+Start\+Min\+Max}!Board@{Board}}
+\subsubsection[{\texorpdfstring{get\+Who\+Start\+Min\+Max()}{getWhoStartMinMax()}}]{\setlength{\rightskip}{0pt plus 5cm}int Board\+::get\+Who\+Start\+Min\+Max (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a799bc1de403b8c9d9425bf2d8fc9de8b}{}\label{class_board_a799bc1de403b8c9d9425bf2d8fc9de8b}
+
+
+Gets who start min\+Max algorithm. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The calculated who start minimum maximum. 
+\end{DoxyReturn}
+\index{Board@{Board}!have\+Move@{have\+Move}}
+\index{have\+Move@{have\+Move}!Board@{Board}}
+\subsubsection[{\texorpdfstring{have\+Move()}{haveMove()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Board\+::have\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a5096df29ad75d9e6be2373e69412d38d}{}\label{class_board_a5096df29ad75d9e6be2373e69412d38d}
+
+
+Determines if we can have move. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+True if have move, false if not. 
+\end{DoxyReturn}
+\index{Board@{Board}!ii\+Move@{ii\+Move}}
+\index{ii\+Move@{ii\+Move}!Board@{Board}}
+\subsubsection[{\texorpdfstring{ii\+Move()}{iiMove()}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::ii\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a9942340f81a2f60ac357a5fc9dad8313}{}\label{class_board_a9942340f81a2f60ac357a5fc9dad8313}
+
+
+Make ii move. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016 
+\end{DoxyDate}
+\index{Board@{Board}!is\+First\+Move@{is\+First\+Move}}
+\index{is\+First\+Move@{is\+First\+Move}!Board@{Board}}
+\subsubsection[{\texorpdfstring{is\+First\+Move()}{isFirstMove()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Board\+::is\+First\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_ad23ca69956781b6dcf632b15fea5b677}{}\label{class_board_ad23ca69956781b6dcf632b15fea5b677}
+
+
+Return which move now. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+True if first move, false if not. 
+\end{DoxyReturn}
+\index{Board@{Board}!is\+Win@{is\+Win}}
+\index{is\+Win@{is\+Win}!Board@{Board}}
+\subsubsection[{\texorpdfstring{is\+Win()}{isWin()}}]{\setlength{\rightskip}{0pt plus 5cm}int Board\+::is\+Win (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a3ff621f3410f5d8011af0c68303f0841}{}\label{class_board_a3ff621f3410f5d8011af0c68303f0841}
+
+
+return not zero value if game is finished. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+1 = first player is win 2 = second player is win 3 = tie. 
+\end{DoxyReturn}
+\index{Board@{Board}!move@{move}}
+\index{move@{move}!Board@{Board}}
+\subsubsection[{\texorpdfstring{move(int cell\+\_\+number)}{move(int cell_number)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::move (
+\begin{DoxyParamCaption}
+\item[{int}]{cell\+\_\+number}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a21ecc642f1351257c69f2d5c8e640deb}{}\label{class_board_a21ecc642f1351257c69f2d5c8e640deb}
+
+
+make a move from cell. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+\_\+number} & The cell number from which the move will be made. \\
+\hline
+\end{DoxyParams}
+\index{Board@{Board}!no\+Move@{no\+Move}}
+\index{no\+Move@{no\+Move}!Board@{Board}}
+\subsubsection[{\texorpdfstring{no\+Move()}{noMove()}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::no\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a79d94f9cb1cb6ee0fc559a1f4bb64cee}{}\label{class_board_a79d94f9cb1cb6ee0fc559a1f4bb64cee}
+
+
+if one of the player dont have move, other put all stones from is cell into kalah. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016 
+\end{DoxyDate}
+\index{Board@{Board}!set\+Difficult\+Second@{set\+Difficult\+Second}}
+\index{set\+Difficult\+Second@{set\+Difficult\+Second}!Board@{Board}}
+\subsubsection[{\texorpdfstring{set\+Difficult\+Second(int diff)}{setDifficultSecond(int diff)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::set\+Difficult\+Second (
+\begin{DoxyParamCaption}
+\item[{int}]{diff}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a4581c7df6b7571c3bdc1c3d8a4a717ee}{}\label{class_board_a4581c7df6b7571c3bdc1c3d8a4a717ee}
+
+
+Sets difficult second. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em diff} & number of moves, which will consider the game for second bot. \\
+\hline
+\end{DoxyParams}
+\index{Board@{Board}!set\+Difficutlt@{set\+Difficutlt}}
+\index{set\+Difficutlt@{set\+Difficutlt}!Board@{Board}}
+\subsubsection[{\texorpdfstring{set\+Difficutlt(int difficult)}{setDifficutlt(int difficult)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::set\+Difficutlt (
+\begin{DoxyParamCaption}
+\item[{int}]{difficlit}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a1dce08c626976cf45b62042edd6feaed}{}\label{class_board_a1dce08c626976cf45b62042edd6feaed}
+
+
+Sets a difficutlt. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em difficlit} & number of moves, which will consider the game for first bot. \\
+\hline
+\end{DoxyParams}
+\index{Board@{Board}!set\+Game\+Mode@{set\+Game\+Mode}}
+\index{set\+Game\+Mode@{set\+Game\+Mode}!Board@{Board}}
+\subsubsection[{\texorpdfstring{set\+Game\+Mode(int mode)}{setGameMode(int mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::set\+Game\+Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_ae3e41080eb6992a95c5bc17ac3b39fdb}{}\label{class_board_ae3e41080eb6992a95c5bc17ac3b39fdb}
+
+
+Sets game mode. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The game mode. \\
+\hline
+\end{DoxyParams}
+\index{Board@{Board}!set\+Who\+Start\+Min\+Max@{set\+Who\+Start\+Min\+Max}}
+\index{set\+Who\+Start\+Min\+Max@{set\+Who\+Start\+Min\+Max}!Board@{Board}}
+\subsubsection[{\texorpdfstring{set\+Who\+Start\+Min\+Max(int number\+Of\+Player)}{setWhoStartMinMax(int numberOfPlayer)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::set\+Who\+Start\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{int}]{number\+Of\+Player}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_a326db41c1abc831e83b19adeb008a206}{}\label{class_board_a326db41c1abc831e83b19adeb008a206}
+
+
+Sets number of player whick started minimum maximum. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+Player} & number of player starting min\+Max. \\
+\hline
+\end{DoxyParams}
+\index{Board@{Board}!undo\+Move@{undo\+Move}}
+\index{undo\+Move@{undo\+Move}!Board@{Board}}
+\subsubsection[{\texorpdfstring{undo\+Move(int cell)}{undoMove(int cell)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::undo\+Move (
+\begin{DoxyParamCaption}
+\item[{int}]{cell}
+\end{DoxyParamCaption}
+)}\hypertarget{class_board_ace9e1e576c696b98a959f16f9caf643e}{}\label{class_board_ace9e1e576c696b98a959f16f9caf643e}
+
+
+Undo move from cell. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & The cell in which last move was made. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/media/tema/\+Work/projects/kalah/kalah/Board.\+h\item 
+/media/tema/\+Work/projects/kalah/kalah/Board.\+cpp\end{DoxyCompactItemize}

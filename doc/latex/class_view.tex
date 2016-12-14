@@ -1,0 +1,260 @@
+\hypertarget{class_view}{}\section{View Class Reference}
+\label{class_view}\index{View@{View}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_view_a3d7a0dbc5015f9ec6389af5148c64a12}{View} (\hyperlink{class_board}{Board} $\ast$board\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_view_ad0dc854db9aabbea98a334dec89f785c}{$\sim$\+View} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_ae2b805e0ae8367975099f196e78db6d6}{show\+Board} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Shows the board in graphic mode. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_a871b2d3369d5ac362bdb970be6fbcb07}{show\+Board} ()
+\begin{DoxyCompactList}\small\item\em Shows the board in a console. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_a309248be7c4916ed9175555b85c9f756}{game\+Cycle} ()
+\begin{DoxyCompactList}\small\item\em Start game cycle. \end{DoxyCompactList}\item 
+int \hyperlink{class_view_a0194d9f27fed5e1996e6959a085ef921}{choose\+Move} (sf\+::\+Render\+Window \&window, sf\+::\+Event \&even)
+\begin{DoxyCompactList}\small\item\em Choose move. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_abf55e996e4a7915a3766e50890682819}{show\+A\+Ll\+Cells} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Shows a ll cells. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_a86a89c23d8ff8a10fe4dd9cd69865604}{show\+Kalahs} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Shows the kalahs. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_a58dcd93b3faba7a86daf3f2f923cbbf3}{main\+Menu} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Main menu. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_a2a43163c0f9071ad70c441131382bea4}{show\+Text} (sf\+::\+Render\+Window \&window, sf\+::\+String text, int x, int y, int type)
+\begin{DoxyCompactList}\small\item\em Shows the text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{View@{View}!View@{View}}
+\index{View@{View}!View@{View}}
+\subsubsection[{\texorpdfstring{View(\+Board $\ast$board\+\_\+)}{View(Board *board_)}}]{\setlength{\rightskip}{0pt plus 5cm}View\+::\+View (
+\begin{DoxyParamCaption}
+\item[{{\bf Board} $\ast$}]{board\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_a3d7a0dbc5015f9ec6389af5148c64a12}{}\label{class_view_a3d7a0dbc5015f9ec6389af5148c64a12}
+
+
+Constructor. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em board\+\_\+} & game board. \\
+\hline
+\end{DoxyParams}
+\index{View@{View}!````~View@{$\sim$\+View}}
+\index{````~View@{$\sim$\+View}!View@{View}}
+\subsubsection[{\texorpdfstring{$\sim$\+View()}{~View()}}]{\setlength{\rightskip}{0pt plus 5cm}View\+::$\sim$\+View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_ad0dc854db9aabbea98a334dec89f785c}{}\label{class_view_ad0dc854db9aabbea98a334dec89f785c}
+
+
+Destructor. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\index{View@{View}!choose\+Move@{choose\+Move}}
+\index{choose\+Move@{choose\+Move}!View@{View}}
+\subsubsection[{\texorpdfstring{choose\+Move(sf\+::\+Render\+Window \&window, sf\+::\+Event \&even)}{chooseMove(sf::RenderWindow &window, sf::Event &even)}}]{\setlength{\rightskip}{0pt plus 5cm}int View\+::choose\+Move (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window, }
+\item[{sf\+::\+Event \&}]{ev}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_a0194d9f27fed5e1996e6959a085ef921}{}\label{class_view_a0194d9f27fed5e1996e6959a085ef921}
+
+
+Choose move. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em window} & current window. \\
+\hline
+\mbox{\tt in,out}  & {\em ev} & current window`s event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell choosing by player or -\/1 if player dont choose his cell. 
+\end{DoxyReturn}
+\index{View@{View}!game\+Cycle@{game\+Cycle}}
+\index{game\+Cycle@{game\+Cycle}!View@{View}}
+\subsubsection[{\texorpdfstring{game\+Cycle()}{gameCycle()}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+::game\+Cycle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_a309248be7c4916ed9175555b85c9f756}{}\label{class_view_a309248be7c4916ed9175555b85c9f756}
+
+
+Start game cycle. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016 
+\end{DoxyDate}
+\index{View@{View}!main\+Menu@{main\+Menu}}
+\index{main\+Menu@{main\+Menu}!View@{View}}
+\subsubsection[{\texorpdfstring{main\+Menu(sf\+::\+Render\+Window \&window)}{mainMenu(sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+::main\+Menu (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_a58dcd93b3faba7a86daf3f2f923cbbf3}{}\label{class_view_a58dcd93b3faba7a86daf3f2f923cbbf3}
+
+
+Main menu. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em window} & the window in which main menu will be displayed. \\
+\hline
+\end{DoxyParams}
+\index{View@{View}!show\+A\+Ll\+Cells@{show\+A\+Ll\+Cells}}
+\index{show\+A\+Ll\+Cells@{show\+A\+Ll\+Cells}!View@{View}}
+\subsubsection[{\texorpdfstring{show\+A\+Ll\+Cells(sf\+::\+Render\+Window \&window)}{showALlCells(sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+::show\+A\+Ll\+Cells (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_abf55e996e4a7915a3766e50890682819}{}\label{class_view_abf55e996e4a7915a3766e50890682819}
+
+
+Shows a ll cells. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em window} & the window in which cells will be displayed.. \\
+\hline
+\end{DoxyParams}
+\index{View@{View}!show\+Board@{show\+Board}}
+\index{show\+Board@{show\+Board}!View@{View}}
+\subsubsection[{\texorpdfstring{show\+Board(sf\+::\+Render\+Window \&window)}{showBoard(sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+::show\+Board (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_ae2b805e0ae8367975099f196e78db6d6}{}\label{class_view_ae2b805e0ae8367975099f196e78db6d6}
+
+
+Shows the board in graphic mode. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em window} & the window in which the board will be displayer. \\
+\hline
+\end{DoxyParams}
+\index{View@{View}!show\+Board@{show\+Board}}
+\index{show\+Board@{show\+Board}!View@{View}}
+\subsubsection[{\texorpdfstring{show\+Board()}{showBoard()}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+::show\+Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_a871b2d3369d5ac362bdb970be6fbcb07}{}\label{class_view_a871b2d3369d5ac362bdb970be6fbcb07}
+
+
+Shows the board in a console. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016 
+\end{DoxyDate}
+\index{View@{View}!show\+Kalahs@{show\+Kalahs}}
+\index{show\+Kalahs@{show\+Kalahs}!View@{View}}
+\subsubsection[{\texorpdfstring{show\+Kalahs(sf\+::\+Render\+Window \&window)}{showKalahs(sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+::show\+Kalahs (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_a86a89c23d8ff8a10fe4dd9cd69865604}{}\label{class_view_a86a89c23d8ff8a10fe4dd9cd69865604}
+
+
+Shows the kalahs. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em window} & the window in which kalahs will be displayed. \\
+\hline
+\end{DoxyParams}
+\index{View@{View}!show\+Text@{show\+Text}}
+\index{show\+Text@{show\+Text}!View@{View}}
+\subsubsection[{\texorpdfstring{show\+Text(sf\+::\+Render\+Window \&window, sf\+::\+String text, int x, int y, int type)}{showText(sf::RenderWindow &window, sf::String text, int x, int y, int type)}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+::show\+Text (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window, }
+\item[{sf\+::\+String}]{text\+\_\+, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_view_a2a43163c0f9071ad70c441131382bea4}{}\label{class_view_a2a43163c0f9071ad70c441131382bea4}
+
+
+Shows the text. 
+
+\begin{DoxyAuthor}{Author}
+Root 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08.\+12.\+2016
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em window} & the window in which text will be displayed. \\
+\hline
+ & {\em text\+\_\+} & The text. \\
+\hline
+ & {\em x} & The x coordinate. \\
+\hline
+ & {\em y} & The y coordinate. \\
+\hline
+ & {\em type} & if type = 1 function will use main menu fonts, if type = 2 fonts for game will be used. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/media/tema/\+Work/projects/kalah/kalah/View.\+h\item 
+/media/tema/\+Work/projects/kalah/kalah/View.\+cpp\end{DoxyCompactItemize}
